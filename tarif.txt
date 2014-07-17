@@ -1,0 +1,91 @@
+{{ Form::open(array('url' => 'login','class'=>'form-horizontal group-border-dashed','data-parsley-namespace'=>'data-parsley-')) }} 
+              <div class="step-pane" id="step3">
+                  <div class="form-group">
+                        <div class="col-sm-5">
+                            {{ Form::text('saison ', '', array('class' => 'form-control', 'placeholder' => 'Saison')) }}
+                        </div>
+                          <div class="col-sm-5">
+                            {{ Form::text('tarif ', '', array('class' => 'form-control', 'placeholder' => 'Tarif')) }}
+                        </div>
+                         <div class="col-sm-13">
+                            
+                <label class="col-sm-3 control-label">date Début</label>
+                <div class="col-sm-7">
+                  <div class="input-group date datetime col-md-5 col-xs-7" data-start-view="4" data-date="1979-09-16" data-date-format="dd MM yyyy" data-link-field="dtp_input1">
+                    <input class="form-control" size="16" type="text" value="">
+                    <span class="input-group-addon btn btn-primary"><span class="glyphicon glyphicon-th"></span></span>
+                  </div>									
+                </div>
+                        </div>
+                         <div class="col-sm-13">
+                            
+                <label class="col-sm-3 control-label">date Fin</label>
+                <div class="col-sm-7">
+                  <div class="input-group date datetime col-md-5 col-xs-7" data-start-view="4" data-date="1979-09-16" data-date-format="dd MM yyyy" data-link-field="dtp_input1">
+                    <input class="form-control" size="16" type="text" value="">
+                    <span class="input-group-addon btn btn-primary"><span class="glyphicon glyphicon-th"></span></span>
+                  </div>									
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    
+                </div>
+                        </div>
+
+                            {{ Form::button('Ajouter', array('class' => 'btn btn-primary col-sm-3 col-md-3 col-lg-3')) }}
+
+                  </div>
+                <div class="form-group">
+                    <div class="row">
+				<div class="col-md-12">
+					<div class="block-flat">
+						<div class="content">
+							<div class="table-responsive">
+							<table class="table no-border hover">
+								<thead class="no-border">
+									<tr>
+										<th style="width:30%;"><strong>Saison</strong></th>
+										<th class="text-right"><strong>Tarif</strong></th>
+										<th style="width:15%;"><strong>Date Début</strong></th>
+										<th style="width:15%;"><strong>Date Fin</strong></th>
+										<th style="width:15%;" class="text-center"><strong>Action</strong></th>
+									</tr>
+								</thead>
+								<tbody class="no-border-y">
+									<tr>
+										<td>Template #1</td>
+										<td class="text-right color-success">$25.2</td>
+										<td>05/14/2013</td>
+										<td class="color-success"><div class="progress"><div class="progress-bar progress-bar-success" style="width: 40%">40%</div></div></td>
+										<td class="text-center"><a class="label label-default" href="#"><i class="fa fa-pencil"></i></a> <a class="label label-danger" href="#"><i class="fa fa-times"></i></a></td>
+									</tr>
+									<tr>
+										<td>Template #2</td>
+										<td class="text-right color-success">$22.5</td>
+										<td>05/14/2013</td>
+										<td class="color-success"><div class="progress"><div class="progress-bar progress-bar-danger" style="width: 30%">30%</div></div></td>
+										<td class="text-center"><a class="label label-default" href="#"><i class="fa fa-pencil"></i></a> <a class="label label-danger" href="#"><i class="fa fa-times"></i></a></td>
+									</tr>
+									<tr>
+										<td>Template #3</td>
+										<td class="text-right color-success">$21</td>
+										<td>05/14/2013</td>
+										<td class="color-success"><div class="progress"><div class="progress-bar progress-bar-primary" style="width: 50%">50%</div></div></td>
+										<td class="text-center"><a class="label label-default" href="#"><i class="fa fa-pencil"></i></a> <a class="label label-danger" href="#"><i class="fa fa-times"></i></a></td>
+									</tr>
+								</tbody>
+							</table>		
+							</div>
+						</div>
+					</div>				
+				</div>
+			</div>
+                </div>
+                
+                <div class="form-group">
+                  <div class="col-sm-12">
+                    {{ HTML::decode(HTML::link('/', '<i class="fa fa-caret-left"></i>Précédent ', array('class' => 'btn btn-default wizard-previous','data-wizard'=>'#wizard1'))) }}
+                        {{HTML::decode( HTML::link('/', 'Valider <i class="fa fa-caret-right"></i>', array('class' => 'btn btn-primary wizard-next','data-wizard'=>'#wizard1')) )}}
+                  </div>
+                </div>	
+              </div>
+               <!--{{ Form::close() }}-->
